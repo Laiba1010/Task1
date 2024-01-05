@@ -28,11 +28,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version : '18'
+          node-version : '16'
 
       - name: Install Newman
         run: npm install -g newman
           
       - name: Run postman tests
-        run: run newman Books.postman_collection.json -e test.postman_environment.json
+        run: run newman Books.postman_collection.json - e test.postman_environment.json
           
